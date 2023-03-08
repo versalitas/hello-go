@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 
-	"../greetings"
+	//"../greetings"
+	"github.com/versalitas/hello-go/greetings"
 )
 
 func main() {
