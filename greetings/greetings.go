@@ -33,7 +33,7 @@ func randomFormat() string {
 		"Hail, %v! Well met!",
 	}
 
-	// Return a randomly selected message format by specifying
-	// a random index for the slice of formats.
+	// Return a randomly selected message
+	// generates random index for the formats' slice.
 	return formats[rand.Intn(len(formats))]
 }
