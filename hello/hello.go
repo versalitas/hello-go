@@ -2,13 +2,21 @@ package main
 
 import (
 	"fmt"
+	"log"
 
-	//"../greetings"
 	"github.com/versalitas/hello-go/greetings"
 )
 
 func main() {
-	fmt.Println("Hello World!")
-	message := greetings.Hello("Sue")
+
+	log.SetPrefix("greetings: ")
+	log.SetFlags(0)
+
+	message, err := greetings.Hello("Sue")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	fmt.Println(message)
 }
