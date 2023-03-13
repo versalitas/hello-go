@@ -1,20 +1,21 @@
 # hello-go
 
-When working locally
+### When working locally
 
 ````
 go mod edit -replace <git-repository-path>=<local-path>
 
 ````
-array
+### ARRAYS
 
+````
 var firstArray [5] int
-
-multidimensional
-
+````
+#### multidimensional
+````
 var multiArray [3][3] int
-
-Go arrays don't have substrings, work with slices
+````
+Go arrays don't have substrings, works with slices
 The default is **zero** for the low bound and the **length of the slice** for the high bound.
 
 For the array
@@ -51,7 +52,7 @@ copy(numbers2, number)  // (<target> <original>)
 
 
 
-
+````
 package main
 
 import "fmt"
@@ -63,9 +64,11 @@ func main() {
 		fmt.Println("nil!")
 	}
 }
+````
 
-slices of slices 
+#### slices of slices 
 
+````
 func main() {
 	// Create a tic-tac-toe board.
 	board := [][]string{
@@ -85,20 +88,21 @@ func main() {
 		fmt.Printf("%s\n", strings.Join(board[i], " "))
 	}
 }
+````
 
+### MAPS : maps keys to values
 
-MAPS : maps keys to values
-
+````
 var firstMap map[string]int  //map[<type for key>]<type of value>
 
 //adding key/ values
 
 firstMap['age'] = 12
 fmt.Println(firstMap['age']) //prints 12
+````
 
-
-ITERATIONS
-
+### ITERATIONS
+````
 i:= 0
 sum := 0
 for i <= 10 {
@@ -111,20 +115,20 @@ fmt.Println(sum)
 for i := 0; i < 10 ; i++ {
 	sum += i
 }
-
-POINTERS
-
+````
+### POINTERS
+````
 var pointer1 *int
 
 var num := 12
 pointer1 = &num
-
+````
 Pointers are usually preferred while passing a struct as an argument or while declaring a method for a defined type.
 
-STRUCTS
+### STRUCTS
 
 collection of different fields
-
+````
 type person struct {
 	name string
 	age int
@@ -133,3 +137,4 @@ type person struct {
 p1 = person{name: "Sue", age: 5}
 person{"Bob", 42}
 pp = &person2{name: "Sue", age: 5}
+````
