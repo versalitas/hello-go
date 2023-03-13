@@ -138,3 +138,37 @@ p1 = person{name: "Sue", age: 5}
 person{"Bob", 42}
 pp = &person2{name: "Sue", age: 5}
 ````
+
+### bye bye GOPATH hello go.mod
+
+go.mod is go's "quivalent" of package.json
+create a file
+
+````
+go.mod init <folder_name>
+````
+
+Equivalent of "npm i"
+adds modules
+
+````
+go get <path/filename>
+````
+
+#### import the module in your project
+
+````
+import <path/filename>
+````
+
+#### import without using it
+
+````
+import _<path/filename>
+````
+
+#### import with alias
+
+````
+import <meAlias> <path/filename>
+````
