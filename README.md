@@ -32,9 +32,9 @@ a[:]
 
 ````
 
-zero value of slice is nil
+zero value of slice is **nil**
 
-var emptySlice [] int
+var emptySlice []int // prints nill
 
 numbers := make([]int, 5 , 10)  (<type>, <length>, <capacity>)
 
